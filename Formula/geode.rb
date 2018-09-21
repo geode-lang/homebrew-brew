@@ -1,17 +1,13 @@
 class Geode < Formula
   desc "The Geode Programming Language"
   homepage "https://github.com/geode-lang/geode"
-  url "https://github.com/geode-lang/geode/releases/download/0.6.6/geode-0.6.6-darwin-amd64.tar.gz"
-  version "0.6.6"
-	sha256 "c6733c9dce3faa1f0c050a2acb3d25a914001c6092b5f98beca691b94515d64e"
-	
+  url "https://geode-release.s3.amazonaws.com/geode-0.6.7-darwin-amd64.tar.gz"
+  version "0.6.7"
+	sha256 "c9c9c082b844d2698ad7e30873781f24d4a17d1d6e6e1c9bbe08abd1c4ef8e8e"
+
 	depends_on "libgc"
-	# depends_on "llvm"
 
   def install
-    # system "cmake", ".", *std_cmake_args
-    # system "make"
-    
 		bin.install "local/bin/geode"
 		lib.install "local/lib/geodelib"
   end
